@@ -10,7 +10,7 @@ import math
 
 st.set_page_config(
     page_title="Skincare Recommendation Engine",
-    page_icon="🧴",
+    page_icon="✨",
     layout="wide"
 )
 
