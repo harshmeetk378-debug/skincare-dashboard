@@ -365,7 +365,7 @@ else:
     st.markdown("")
     page_cols = st.columns([1, 1, 2, 1, 1])
     with page_cols[0]:
-        if st.button("◀ First", disabled=(current_page==1), use_container_width=True):
+        if st.button("<< First", disabled=(current_page==1), use_container_width=True):
             st.session_state.current_page = 1; st.rerun()
     with page_cols[1]:
         if st.button("← Prev", disabled=(current_page==1), use_container_width=True):
@@ -377,7 +377,7 @@ else:
         if st.button("Next →", disabled=(current_page==total_pages), use_container_width=True):
             st.session_state.current_page = current_page + 1; st.rerun()
     with page_cols[4]:
-        if st.button("Last ▶", disabled=(current_page==total_pages), use_container_width=True):
+        if st.button("Last >>", disabled=(current_page==total_pages), use_container_width=True):
             st.session_state.current_page = total_pages; st.rerun()
 
     st.markdown(f'<div class="page-info">Page {current_page} of {total_pages} · {PRODUCTS_PER_PAGE} per page</div>', unsafe_allow_html=True)
